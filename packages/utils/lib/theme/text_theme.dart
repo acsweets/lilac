@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lilac/lilac.dart';
+import 'package:utils/theme/test_styles.dart';
+
+import 'app_colors.dart';
 
 class TextThemes {
   /// Main text theme

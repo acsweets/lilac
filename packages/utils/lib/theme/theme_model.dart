@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:lilac/lilac.dart';
+import 'package:utils/theme/test_styles.dart';
+import 'package:utils/theme/text_theme.dart';
+
+import 'app_colors.dart';
 
 class AppThemeModel {
   static ThemeData get base {

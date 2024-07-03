@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class MePage extends StatefulWidget {
   const MePage({super.key});
 
@@ -9,6 +10,10 @@ class MePage extends StatefulWidget {
 class _MePageState extends State<MePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('我的'),
+      ),
+    );
   }
 }
