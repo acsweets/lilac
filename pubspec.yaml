@@ -38,7 +38,9 @@ dependencies:
   flutter_riverpod: ^2.4.9    # 状态管理
   go_router: ^13.2.3   # 路由
   window_manager: ^0.3.9 #桌面尺寸
-
+  animated_bottom_navigation_bar: ^1.3.3 #底部导航
+  auto_size_text: ^3.0.0-nullsafety.0
+  circular_reveal_animation: ^2.0.0
   utils:
     path: packages/utils
 
@@ -58,7 +60,14 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  fonts:
+    - family: LilacIcon
+      fonts:
+        - asset: assets/iconfont/lilac_icon.ttf
+  # 阿里妈妈字体
+    - family: AliDao
+      fonts:
+        - asset: assets/ttf/AlimamaDaoLiTi.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

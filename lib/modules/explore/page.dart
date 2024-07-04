@@ -18,6 +18,7 @@ class _ExplorePageState extends State<ExplorePage> {
       appBar: AppBar(
         title: Text('探索页'),
       ),
+
     );
   }
 }

@@ -1,6 +1,6 @@
 # lilac
 
-Create some fun little features
+## 星趣
 
 ## 基本
 
