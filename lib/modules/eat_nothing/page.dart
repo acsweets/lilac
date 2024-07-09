@@ -6,6 +6,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:sensors_plus/sensors_plus.dart';
 
 class EatPage extends StatefulWidget {
@@ -18,24 +19,32 @@ class EatPage extends StatefulWidget {
 class _EatPageState extends State<EatPage> {
   StreamSubscription<AccelerometerEvent>? _accelerometerSubscription;
   double x = 0, y = 0, z = 0;
+  bool show = false;
 
   void startListening() {
     _accelerometerSubscription = accelerometerEventStream().listen(
-          (AccelerometerEvent event) {
+      (AccelerometerEvent event) {
         setState(() {
           //大于十
           x = event.x;
           y = event.y;
           z = event.z;
           if (x > 10 || y > 10 || z > 10) {
-            showDialog(
-                builder: (BuildContext context) {
-                  return CupertinoAlertDialog(
-                    title: Text("摇一摇"),
-                  );
-                },
-                context: context,
-                barrierDismissible: true);
+            if (!show) {
+              show = true;
+              showDialog(
+                      builder: (BuildContext context) {
+                        return CupertinoAlertDialog(
+                          title: Text("摇一摇"),
+
+                        );
+                      },
+                      context: context,
+                      barrierDismissible: true)
+                  .whenComplete(() {
+                show = false;
+              });
+            }
           }
         });
       },
@@ -62,12 +71,17 @@ class _EatPageState extends State<EatPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('X: $x'),
-            Text('Y: $y'),
-            Text('Z: $z'),
+            Text("不知道吃啥？"),
+            Text("快来摇一摇"),
+
+            Lottie.asset('assets/lottie/blast.json'),
+
+
+
           ],
         ),
       ),
     );
   }
 }
+
