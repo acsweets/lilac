@@ -37,3 +37,10 @@
 ## linux
 ### 递归删除这个目录下所有文件
 `rm -rf ` utils[目录]
+### 配置文件
+> vi ~/.zshrc   
+> source ~/.zshrc   
+
+
+## 自动生成代码
+>dart run build_runner build
