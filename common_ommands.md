@@ -41,6 +41,24 @@
 > vi ~/.zshrc   
 > source ~/.zshrc   
 
+### 查看列表
+>ls -a
+
+### 移除git 管理
+>rm -rf.git
+
+### 将commit 重置 保留更改
+
+>git reset --soft HEAD^
+#### 撤销最近的两个commit
+> git reset --hard HEAD~2
+
+### commit 重置不保留
+>git reset --hard HEAD^
 
 ## 自动生成代码
 >dart run build_runner build
+
+## ios下载依赖包
+> pod install --repo-update
+
