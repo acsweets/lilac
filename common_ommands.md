@@ -35,6 +35,7 @@
 ### 发布包
 > dart pub publish
 ## linux
+
 ### 递归删除这个目录下所有文件
 `rm -rf ` utils[目录]
 ### 配置文件
@@ -44,6 +45,21 @@
 ### 查看列表
 >ls -a
 
+
+### 当前命令行所处的位置
+> pwd
+
+### 查看一下内存和存储
+
+> free -h 和 df -h
+
+### 查看系统版本
+
+> cat /etc/os-release
+
+
+
+## git命令
 ### 移除git 管理
 >rm -rf.git
 
