@@ -72,9 +72,46 @@
 ### commit 重置不保留
 >git reset --hard HEAD^
 
+
+### 设置远端库
+> git remote add origin git@git.wehanyu.com:flutter-saas/cese_reload.git
+
+### 查看
+> git remote -v
+
+
+### 创建新的分支
+> git checkout -b gh-pages
+> 切换 
+> 
+>git checkout <branch-name>
+> 
+> git switch <branch-name>
+> 
+> 删除
+> 
+> git branch -d <branch-name>
+> 
+> 强制删除
+> 
+> git branch -D <branch-name>
+> 
+> 删除远程分支
+> 
+> git push origin --delete <branch-name>
+> 
+> 使用 git log 或者长输出的情况：
+如果你使用了 git log 或者查看了很长的分支列表，可能会进入到一个叫做 "less" 的分页查看器。在这种情况下：
+
+>按 q 键退出查看器
 ## 自动生成代码
 >dart run build_runner build
 
 ## ios下载依赖包
 > pod install --repo-update
 
+
+## 其他  
+
+### realm  生成实体
+>dart pub run realm generate
