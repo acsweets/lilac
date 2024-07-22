@@ -17,6 +17,9 @@
 
 > flutter build ios --release --no-tree-shake-icons --verbose
 
+### 开启 profile
+> flutter run --profile
+> flutter/packages/flutter_tools/gradle/flutter.gradle 的 buildModeFor 方法中将 debug 模式改为 profile即可。
 
 ###  运行 build_runner
 `dart  run build_runner build --delete-conflicting-outputs`
